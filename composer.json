@@ -4,26 +4,27 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
-        "keboola/php-component": "^8.1"
+        "keboola/php-component": "^8.1",
+        "keboola/storage-api-client": "dev-ondra-allow-new-symfony-packages"
     },
     "require-dev": {
-        "php-parallel-lint/php-parallel-lint": "^1.2",
         "keboola/coding-standard": ">=7.0.2",
-        "keboola/datadir-tests": "^4.0",
+        "keboola/datadir-tests": "^5.0",
         "keboola/php-temp": "^2.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpstan/phpstan": "^0.12.14",
         "phpunit/phpunit": "^9.0",
-        "symfony/process": "^5.0"
+        "symfony/process": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "MyComponent\\": "src/"
+            "Keboola\\DbWriter\\SnowflakeWorkspace\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MyComponent\\Tests\\": "tests/phpunit/",
-            "MyComponent\\FunctionalTests\\": "tests/functional/"
+            "Keboola\\DbWriter\\SnowflakeWorkspace\\Tests\\": "tests/phpunit/",
+            "Keboola\\DbWriter\\SnowflakeWorkspace\\FunctionalTests\\": "tests/functional/"
         }
     },
     "scripts": {
