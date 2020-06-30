@@ -1,7 +1,11 @@
 version: '3'
 services:
+  app: &mainApp
+    build:
+      context: .
+    image: keboola/wr-snowflake-workspace
   dev:
-    build: .
+    <<: *mainApp
     volumes:
       - ./:/code
       - ./data:/data
