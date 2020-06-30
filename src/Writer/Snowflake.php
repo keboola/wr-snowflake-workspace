@@ -33,8 +33,7 @@ class Snowflake
         }
 
         return [
-            'status' => 'success'
+            'status' => 'success',
         ];
     }
-
 }
