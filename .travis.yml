@@ -9,7 +9,12 @@ before_script:
   - export APP_IMAGE=keboola-component
   - docker -v
   - docker build -t $APP_IMAGE .
-  - docker run $APP_IMAGE composer ci
+  - docker run
+    -e KBC_URL
+    -e KBC_TOKEN
+    -e WORKSPACE_ID
+    $APP_IMAGE
+    composer ci
 
   # push test image to ECR
   - docker pull quay.io/keboola/developer-portal-cli-v2:latest
