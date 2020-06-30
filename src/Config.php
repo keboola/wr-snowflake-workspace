@@ -11,18 +11,20 @@ class Config extends BaseConfig
 {
     public function getStorageApiUrl(): string
     {
-        if (!getenv('KBC_URL')) {
+        $url = getenv('KBC_URL');
+        if (!$url) {
             throw new UserException('Missing KBC API url');
         }
-        return getenv('KBC_URL');
+        return $url;
     }
 
     public function getStorageApiToken(): string
     {
-        if (!getenv('KBC_TOKEN')) {
+        $token = getenv('KBC_TOKEN');
+        if (!$token) {
             throw new UserException('Missing KBC API token');
         }
-        return getenv('KBC_TOKEN');
+        return $token;
     }
 
     public function getWorkspaceId(): string
