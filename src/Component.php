@@ -39,7 +39,7 @@ class Component extends BaseComponent
 
         $writer = new Snowflake($this->client, $config);
 
-        return $writer->testConnectionAction($config);
+        return $writer->testConnectionAction();
     }
 
     protected function getSyncActions(): array

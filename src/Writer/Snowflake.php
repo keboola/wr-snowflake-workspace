@@ -22,12 +22,12 @@ class Snowflake
         $this->client = $client;
     }
 
-    public function testConnectionAction(Config $config): array
+    public function testConnectionAction(): array
     {
         $workspaces = new Workspaces($this->client);
 
         try {
-            $workspaces->getWorkspace($config->getWorkspaceId());
+            $workspaces->getWorkspace($this->config->getWorkspaceId());
         } catch (ClientException $clientException) {
             throw new UserException($clientException->getMessage(), 0, $clientException);
         }
