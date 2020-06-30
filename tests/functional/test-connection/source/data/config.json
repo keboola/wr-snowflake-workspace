@@ -1,0 +1,6 @@
+{
+  "action": "testConnection",
+  "parameters": {
+    "workspaceId": "xxx"
+  }
+}

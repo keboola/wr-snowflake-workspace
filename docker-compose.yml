@@ -4,6 +4,10 @@ services:
     build:
       context: .
     image: keboola/wr-snowflake-workspace
+    environment:
+      - KBC_URL
+      - KBC_TOKEN
+      - WORKSPACE_ID
   dev:
     <<: *mainApp
     volumes:
