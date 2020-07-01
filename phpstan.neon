@@ -3,3 +3,5 @@ parameters:
     ignoreErrors:
         - '#Cannot call method end\(\) on Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface\|null.#'
         - '#Cannot call method scalarNode\(\) on Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface\|null\.#'
+        - '#\$stack of function array_shift expects array, array<bool\|float\|int\|string, mixed\> given\.#'
+        - '#\$var of function count expects array\|Countable, array<bool\|float\|int\|string, mixed> given\.#'
