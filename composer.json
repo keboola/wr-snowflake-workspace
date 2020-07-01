@@ -4,6 +4,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
+        "ext-json": "*",
         "keboola/php-component": "^8.1",
         "keboola/storage-api-client": "dev-ondra-allow-new-symfony-packages"
     },
