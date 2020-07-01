@@ -34,7 +34,12 @@ class Component extends BaseComponent
 
     protected function run(): void
     {
-        // @TODO implement
+        /** @var Config $config */
+        $config = $this->getConfig();
+
+        $writer = new Snowflake($this->client, $config);
+
+        $writer->runAction();
     }
 
     public function testConnectionAction(): array
