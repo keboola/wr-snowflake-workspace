@@ -105,6 +105,65 @@ for using incremental write, you must have defined primary key on the table
 }
 ```
 
+### Filtering data
+```json
+{
+  "parameters": {
+    "workspaceId": "xyz",
+    "tableId": "in.bucket.table",
+    "dbName": "exampleTable",
+    "items": [
+      {
+        "name": "id",
+        "dbName": "id",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "name",
+        "dbName": "name",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "glasses",
+        "dbName": "glasses",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "age",
+        "dbName": "age",
+        "type": "varchar",
+        "size": "10",
+        "nullable": false,
+        "default": ""
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "where_column": "glasses",
+          "where_values": [
+            "yes"
+          ],
+          "where_operator": "eq"
+        }
+      ]
+    }
+  }
+}
+
+```
+
 ## Development
 
 Clone this repository and init the workspace with following command::
