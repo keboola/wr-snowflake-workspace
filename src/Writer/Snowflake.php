@@ -64,6 +64,15 @@ class Snowflake
             ],
         ];
 
+        $inputMappingTable = $this->config->getInputTables()[0] ?? false;
+        if ($inputMappingTable) {
+            $options['input'][0] += [
+                'whereColumn' => $this->config->getInputTables()[0]['where_column'],
+                'whereValues' => $this->config->getInputTables()[0]['where_values'],
+                'whereOperator' => $this->config->getInputTables()[0]['where_operator'],
+            ];
+        }
+
         if ($this->config->isIncremental()) {
             $options['input'][0]['days'] = 'adaptive';
         }
