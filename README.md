@@ -1,22 +1,126 @@
-# my-component
+# Snowflake writer
+[![Build Status](https://travis-ci.com/keboola/wr-snowflake-workspace.svg?branch=master)](https://travis-ci.org/keboola/db-writer-snowflake)
 
-[![Build Status](https://travis-ci.com/keboola/my-component.svg?branch=master)](https://travis-ci.com/keboola/my-component)
+> Writes data from Keboola Connection Storage to Snowflake database
 
-> Fill in description
+# Example configurations
 
-# Usage
+#### Simple write:
+```json
+{
+  "parameters": {
+    "workspaceId": "xyz",
+    "tableId": "in.bucket.table",
+    "dbName": "exampleTable",
+    "primaryKey": [
+      "id"
+    ],
+    "items": [
+      {
+        "name": "id",
+        "dbName": "id",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "name",
+        "dbName": "name",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "glasses",
+        "dbName": "glasses",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "age",
+        "dbName": "age",
+        "type": "varchar",
+        "size": "10",
+        "nullable": false,
+        "default": ""
+      }
+    ]
+  }
+}
+```
 
-> fill in usage instructions
+#### Incremental write:
+
+for using incremental write, you must have defined primary key on the table
+
+```json
+{
+  "parameters": {
+    "workspaceId": "xyz",
+    "tableId": "in.bucket.table",
+    "dbName": "exampleTable",
+    "incremental": true,
+    "primaryKey": [
+      "id"
+    ],
+    "items": [
+      {
+        "name": "id",
+        "dbName": "id",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "name",
+        "dbName": "name",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "glasses",
+        "dbName": "glasses",
+        "type": "varchar",
+        "size": "255",
+        "nullable": false,
+        "default": ""
+      },
+      {
+        "name": "age",
+        "dbName": "age",
+        "type": "varchar",
+        "size": "10",
+        "nullable": false,
+        "default": ""
+      }
+    ]
+  }
+}
+```
 
 ## Development
- 
-Clone this repository and init the workspace with following command:
+
+Clone this repository and init the workspace with following command::
 
 ```
-git clone https://github.com/keboola/my-component
-cd my-component
+git clone https://github.com/keboola/wr-snowflake-workspace
+cd wr-snowflake-workspace
 docker-compose build
 docker-compose run --rm dev composer install --no-scripts
+```
+
+Create `.env` file:
+
+```dotenv
+KBC_URL=
+KBC_TOKEN=
 ```
 
 Run the test suite using this command:
@@ -25,6 +129,3 @@ Run the test suite using this command:
 docker-compose run --rm dev composer tests
 ```
  
-# Integration
-
-For information about deployment and integration with KBC, please refer to the [deployment section of developers documentation](https://developers.keboola.com/extend/component/deployment/) 
