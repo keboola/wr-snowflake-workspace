@@ -36,4 +36,38 @@ class Snowflake
             'status' => 'success',
         ];
     }
+
+    public function runAction(): void
+    {
+        $workspaces = new Workspaces($this->client);
+
+        $columns = [];
+        foreach ($this->config->getItems() as $item) {
+            $columns[] = [
+                'source' => $item['name'],
+                'destination' => $item['dbName'],
+                'type' => $item['type'],
+                'length' => $item['size'],
+                'nullable' => $item['nullable'],
+                'convertEmptyValuesToNull' => $item['nullable'],
+            ];
+        }
+
+        $options = [
+            'input' => [
+                [
+                    'source' => $this->config->getTableId(),
+                    'destination' => $this->config->getDbName(),
+                    'incremental' => $this->config->getIncremental(),
+                    'columns' => $columns,
+                ],
+            ],
+        ];
+
+        try {
+            $workspaces->loadWorkspaceData($this->config->getWorkspaceId(), $options);
+        } catch (ClientException $clientException) {
+            throw new UserException($clientException->getMessage(), 0, $clientException);
+        }
+    }
 }

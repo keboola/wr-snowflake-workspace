@@ -4,12 +4,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
+        "ext-json": "*",
         "keboola/php-component": "^8.1",
         "keboola/storage-api-client": "dev-ondra-allow-new-symfony-packages"
     },
     "require-dev": {
         "keboola/coding-standard": ">=7.0.2",
         "keboola/datadir-tests": "^5.0",
+        "keboola/db-adapter-snowflake": "1.0.4",
         "keboola/php-temp": "^2.0",
         "php-parallel-lint/php-parallel-lint": "^1.2",
         "phpstan/phpstan": "^0.12.14",
