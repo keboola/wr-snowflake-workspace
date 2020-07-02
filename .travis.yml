@@ -12,7 +12,6 @@ before_script:
   - docker run
     -e KBC_URL
     -e KBC_TOKEN
-    -e WORKSPACE_ID
     $APP_IMAGE
     composer ci
 
