@@ -64,6 +64,10 @@ class Snowflake
             ],
         ];
 
+        if ($this->config->isIncremental()) {
+            $options['input'][0]['days'] = 'adaptive';
+        }
+
         try {
             $workspaces->loadWorkspaceData($this->config->getWorkspaceId(), $options);
         } catch (ClientException $clientException) {
