@@ -56,4 +56,9 @@ class Config extends BaseConfig
     {
         return $this->getValue(['parameters', 'items']);
     }
+
+    public function isIncremental(): bool
+    {
+        return (bool) $this->getValue(['parameters', 'incremental']);
+    }
 }
