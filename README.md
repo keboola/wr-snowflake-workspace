@@ -3,6 +3,21 @@
 
 > Writes data from Keboola Connection Storage to Snowflake database
 
+# Options
+The configuration requires following properties:
+
+- `workspaceId` - string (required): workspace identifier from [List workspaces](https://keboola.docs.apiary.io/#reference/workspaces/workspaces-collection/list-workspaces)
+- `tableId` - string (required): table identifier from [List tables](https://keboola.docs.apiary.io/#reference/tables/list-tables/list-all-tables)
+- `dbName` - string (required): name of the table in database
+- `incremental` - bool (optional): incremental writes
+- `items` - array (required): list of columns
+    - `name` - string (required): name from csv file (in Keboola Connection Storage)
+    - `dbName` - string (required): name of the column in table
+    - `type` - string (required): column data type
+    - `size` - string (optional): column size
+    - `nullable` - string (optional): column can be null
+    - `default` - string (optional): default value of the column
+
 # Example configurations
 
 #### Simple write:
