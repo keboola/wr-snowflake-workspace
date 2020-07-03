@@ -27,9 +27,6 @@ The configuration requires following properties:
     "workspaceId": "xyz",
     "tableId": "in.bucket.table",
     "dbName": "exampleTable",
-    "primaryKey": [
-      "id"
-    ],
     "items": [
       {
         "name": "id",
@@ -70,7 +67,7 @@ The configuration requires following properties:
 
 #### Incremental write:
 
-for using incremental write, you must have defined primary key on the table
+for using incremental write, you must have defined primary key on the Keboola Connection Storage table
 
 ```json
 {
@@ -79,9 +76,6 @@ for using incremental write, you must have defined primary key on the table
     "tableId": "in.bucket.table",
     "dbName": "exampleTable",
     "incremental": true,
-    "primaryKey": [
-      "id"
-    ],
     "items": [
       {
         "name": "id",
