@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38e69fb803e60eee6cf40131ffcdf5e3",
+    "content-hash": "64a27d3e231f4eeb914d9d42f420b7b3",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.144.0",
+            "version": "3.145.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6848e85b4a019e1012e65cf8c82888863fe9dad7"
+                "reference": "df5406b49f4f5774045e51e8fecc75717c4d6454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6848e85b4a019e1012e65cf8c82888863fe9dad7",
-                "reference": "6848e85b4a019e1012e65cf8c82888863fe9dad7",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/df5406b49f4f5774045e51e8fecc75717c4d6454",
+                "reference": "df5406b49f4f5774045e51e8fecc75717c4d6454",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-06-29T18:15:16+00:00"
+            "time": "2020-07-02T18:12:35+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -406,16 +406,16 @@
         },
         {
             "name": "keboola/storage-api-client",
-            "version": "dev-ondra-allow-new-symfony-packages",
+            "version": "10.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/keboola/storage-api-php-client.git",
-                "reference": "794a9e020ec6c48bc3317002ce155b2a0593bfdc"
+                "reference": "7d960a0d8008bbf8f283ea91182ad7348dd8529f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/keboola/storage-api-php-client/zipball/794a9e020ec6c48bc3317002ce155b2a0593bfdc",
-                "reference": "794a9e020ec6c48bc3317002ce155b2a0593bfdc",
+                "url": "https://api.github.com/repos/keboola/storage-api-php-client/zipball/7d960a0d8008bbf8f283ea91182ad7348dd8529f",
+                "reference": "7d960a0d8008bbf8f283ea91182ad7348dd8529f",
                 "shasum": ""
             },
             "require": {
@@ -453,7 +453,7 @@
             ],
             "description": "Keboola Storage API PHP CLient",
             "homepage": "http://keboola.com",
-            "time": "2020-06-30T11:38:37+00:00"
+            "time": "2020-07-03T05:14:16+00:00"
         },
         {
             "name": "microsoft/azure-storage-blob",
@@ -2284,16 +2284,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.31",
+            "version": "0.12.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "776c8056b401e1b67f277b9e9fb334d1a274671d"
+                "reference": "d03863f504c8432b3de4d1881f73f6acb8c0e67c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/776c8056b401e1b67f277b9e9fb334d1a274671d",
-                "reference": "776c8056b401e1b67f277b9e9fb334d1a274671d",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d03863f504c8432b3de4d1881f73f6acb8c0e67c",
+                "reference": "d03863f504c8432b3de4d1881f73f6acb8c0e67c",
                 "shasum": ""
             },
             "require": {
@@ -2336,7 +2336,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-24T20:55:29+00:00"
+            "time": "2020-07-01T11:57:52+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3704,9 +3704,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "keboola/storage-api-client": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
