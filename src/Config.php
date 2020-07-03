@@ -42,16 +42,6 @@ class Config extends BaseConfig
         return $this->getValue(['parameters', 'dbName']);
     }
 
-    public function getIncremental(): bool
-    {
-        return $this->getValue(['parameters', 'incremental']);
-    }
-
-    public function getPrimaryKeys(): array
-    {
-        return $this->getValue(['parameters', 'primaryKey']);
-    }
-
     public function getItems(): array
     {
         return $this->getValue(['parameters', 'items']);

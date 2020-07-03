@@ -16,7 +16,10 @@ class ConfigDefinition extends BaseConfigDefinition
         /** @noinspection NullPointerExceptionInspection */
         $parametersNode
             ->children()
-                ->scalarNode('workspaceId')->end()
+                ->scalarNode('workspaceId')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end()
                 ->scalarNode('tableId')
                     ->isRequired()
                     ->cannotBeEmpty()
@@ -27,9 +30,6 @@ class ConfigDefinition extends BaseConfigDefinition
                 ->end()
                 ->booleanNode('incremental')
                     ->defaultValue(false)
-                ->end()
-                ->arrayNode('primaryKey')
-                    ->prototype('scalar')->end()
                 ->end()
                 ->arrayNode('items')
                     ->prototype('array')
