@@ -58,7 +58,7 @@ class Snowflake
                 [
                     'source' => $this->config->getTableId(),
                     'destination' => $this->config->getDbName(),
-                    'incremental' => $this->config->getIncremental(),
+                    'incremental' => $this->config->isIncremental(),
                     'columns' => $columns,
                 ],
             ],
