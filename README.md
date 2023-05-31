@@ -1,5 +1,4 @@
 # Snowflake writer
-[![Build Status](https://travis-ci.com/keboola/wr-snowflake-workspace.svg?branch=master)](https://travis-ci.org/keboola/db-writer-snowflake)
 
 > Writes data from Keboola Connection Storage to Snowflake database
 
