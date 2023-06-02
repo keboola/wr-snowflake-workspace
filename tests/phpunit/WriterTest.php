@@ -65,6 +65,9 @@ class WriterTest extends TestCase
 
         // cleanup tables and bucket
         if ($this->bucketId) {
+            foreach ($this->client->listTables($this->bucketId) as $table) {
+                $this->client->dropTable($table['id'], ['force' => 'force']);
+            }
             $this->client->dropBucket($this->bucketId, ['force' => 'force']);
         }
     }
